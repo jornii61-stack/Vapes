@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Vapos Mendoza | Catálogo de vapes</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="vp.css">
+</head>
+
+<aside class="pedido">
+  <h3>🛒 Tu pedido</h3>
+
+  <ul id="lista-pedido">
+    <li class="vacio">No hay productos agregados</li>
+  </ul>
+
+  <p class="total">
+    Total: <span id="total">$0</span>
+  </p>
+
+  <button id="enviarPedido" class="btn-enviar">
+    Enviar pedido por WhatsApp
+  </button>
+</aside>
+
+
+<body>
+
+  <!-- HERO -->
+  <header class="hero">
+    <img src="logo.jpeg" alt="Vapos Mendoza" class="logo">
+
+    <h1>Vapes originales y listos para usar</h1>
+    <p class="hero-sub">
+      Venta directa por WhatsApp · Entrega rápida en el día
+    </p>
+
+    <a href="#catalogo" class="btn-principal">
+      Ver catálogo
+    </a>
+  </header>
+<section class="como-comprar">
+  <h2>¿Cómo comprar?</h2>
+
+  <div class="pasos">
+    <div class="paso">
+      <span class="numero">1</span>
+      <p>Elegí el vape que más te guste del catálogo</p>
+    </div>
+
+    <div class="paso">
+      <span class="numero">2</span>
+      <p>Escribinos por WhatsApp para confirmar stock</p>
+    </div>
+
+    <div class="paso">
+      <span class="numero">3</span>
+      <p>Coordinamos la entrega rápida en el día</p>
+    </div>
+  </div>
+</section>
+
+  <!-- CATÁLOGO -->
+  <main id="catalogo" class="catalogo">
+
+    <div class="catalogo-header">
+      <h2>Nuestros productos</h2>
+
+      <input
+        id="buscador"
+        type="text"
+        placeholder="Buscar vape o marca..."
+        aria-label="Buscar productos"
+      >
+    </div>
+
+    <div id="info-productos" class="productos">
+      <!-- Productos generados por JS -->
+    </div>
+
+  </main>
+<section class="porque-elegir">
+  <h2>¿Por qué elegirnos?</h2>
+
+  <div class="beneficios">
+    <div class="beneficio">✔ Productos originales</div>
+    <div class="beneficio">✔ Atención directa por WhatsApp</div>
+    <div class="beneficio">✔ Entrega rápida en el día</div>
+    <div class="beneficio">✔ Sin registros</div>
+  </div>
+</section>
+<section class="datos-negocio">
+  <p>📍 Mendoza, Argentina</p>
+  <p>🕒 Atención todos los días</p>
+  <p>🚚 Entregas rápidas en la zona</p>
+</section>
+
+
+  <!-- WHATSAPP FLOTANTE -->
+  <a
+    href="https://wa.me/5492611234567"
+    target="_blank"
+    class="wsp"
+    aria-label="Contactar por WhatsApp"
+  >
+    <img src="whatsapp-icon.png" alt="">
+  </a>
+
+  <!-- JS -->
+  <script src="script.js"></script>
+</body>
+</html>
+
