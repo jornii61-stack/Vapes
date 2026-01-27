@@ -1,0 +1,409 @@
+/* =========================
+   VARIABLES PREMIUM
+========================= */
+:root {
+  --violeta: #7b5cff;
+  --violeta-claro: #9d7cff;
+
+  --fondo: #0f0f14;
+  --card: #1a1a1f;
+
+  --texto: #ffffff;
+  --texto-soft: #bdbdbd;
+}
+
+/* =========================
+   RESET
+========================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* =========================
+   BASE
+========================= */
+body {
+  background: var(--fondo);
+  color: var(--texto);
+  padding-bottom: 120px;
+}
+
+/* =========================
+   HERO
+========================= */
+.hero {
+  text-align: center;
+  padding: 80px 20px 60px;
+  background: radial-gradient(circle at top, #1f1f2e, #0f0f14);
+  color: var(--texto);
+}
+
+.hero h1 {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.hero-sub {
+  font-size: 14px;
+  opacity: 0.9;
+  margin-bottom: 25px;
+}
+
+/* =========================
+   LOGO
+========================= */
+.logo {
+  width: 90px;
+  margin-bottom: 20px;
+  border-radius: 12px;
+  filter: drop-shadow(0 6px 14px rgba(0,0,0,0.4));
+}
+
+/* =========================
+   BOTONES
+========================= */
+.btn-principal {
+  background: linear-gradient(135deg, var(--violeta), var(--violeta-claro));
+  color: white;
+  padding: 12px 28px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-block;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-principal:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(123,92,255,0.45);
+}
+
+.btn-agregar {
+  background: linear-gradient(135deg, var(--violeta), var(--violeta-claro));
+  color: white;
+  border: none;
+  padding: 9px 16px;
+  border-radius: 20px;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.btn-enviar {
+  width: 100%;
+  background: #25d366;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 24px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* =========================
+   PANEL DE PEDIDO
+========================= */
+.pedido {
+  position: fixed;
+  bottom: 90px;
+  right: 20px;
+  width: 300px;
+  background: var(--card);
+  color: var(--texto);
+  border-radius: 20px;
+  padding: 18px;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.7);
+  z-index: 998;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.3s ease;
+}
+
+.pedido.activo {
+  opacity: 1;
+  transform: translateY(0);
+}
+.item-pedido {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+.item-pedido span {
+  color: var(--texto-soft);
+}
+
+.btn-quitar {
+  background: none;
+  border: none;
+  color: #ff5c5c;
+  font-size: 14px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.btn-quitar:hover {
+  transform: scale(1.2);
+}
+.item-pedido {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.item-pedido .nombre {
+  font-size: 13px;
+}
+
+.controles {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.btn-mas,
+.btn-menos {
+  background: var(--violeta);
+  color: white;
+  border: none;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.cantidad {
+  min-width: 16px;
+  text-align: center;
+  font-size: 13px;
+}
+
+.btn-quitar {
+  background: none;
+  border: none;
+  color: #ff5c5c;
+  cursor: pointer;
+}
+
+
+/* =========================
+   CÓMO COMPRAR
+========================= */
+.como-comprar {
+  max-width: 1100px;
+  margin: 60px auto;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.como-comprar h2 {
+  margin-bottom: 30px;
+}
+
+.pasos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+}
+
+.paso {
+  background: var(--card);
+  padding: 25px;
+  border-radius: 18px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+}
+
+.paso .numero {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--violeta);
+  color: white;
+  font-weight: bold;
+  margin-bottom: 12px;
+}
+
+/* =========================
+   CATÁLOGO
+========================= */
+.catalogo {
+  background: var(--fondo);
+  margin-top: -30px;
+  padding: 40px 20px;
+  max-width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.catalogo-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* =========================
+   BUSCADOR
+========================= */
+#buscador {
+  width: 100%;
+  max-width: 320px;
+  padding: 12px 18px;
+  border-radius: 25px;
+  border: none;
+  background: var(--card);
+  color: var(--texto);
+  font-size: 14px;
+}
+
+/* =========================
+   GRID PRODUCTOS
+========================= */
+.productos {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+/* =========================
+   CARD PRODUCTO
+========================= */
+.producto {
+  background: var(--card);
+  padding: 16px;
+  border-radius: 18px;
+  text-align: center;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.5);
+  position: relative;
+  transition: transform 0.2s ease;
+}
+
+.producto:hover {
+  transform: translateY(-4px);
+}
+
+.producto img {
+  width: 100%;
+  max-height: 180px;
+  object-fit: contain;
+  margin-bottom: 10px;
+}
+
+.producto h3 {
+  font-size: 16px;
+  margin-bottom: 6px;
+}
+
+.producto span {
+  display: block;
+  font-weight: bold;
+  color: var(--violeta-claro);
+  font-size: 16px;
+  margin-bottom: 6px;
+}
+
+.producto p {
+  font-size: 13px;
+  color: var(--texto-soft);
+  margin-bottom: 12px;
+}
+
+/* =========================
+   BADGE
+========================= */
+.badge-mas-vendido {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: linear-gradient(135deg, #ffcc00, #ff9900);
+  color: #000;
+  font-size: 11px;
+  font-weight: bold;
+  padding: 5px 10px;
+  border-radius: 999px;
+}
+
+/* =========================
+   POR QUÉ ELEGIRNOS
+========================= */
+.porque-elegir {
+  background: #13131a;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.beneficios {
+  max-width: 900px;
+  margin: 30px auto 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.beneficio {
+  background: var(--card);
+  padding: 18px;
+  border-radius: 16px;
+  font-size: 14px;
+}
+
+/* =========================
+   DATOS
+========================= */
+.datos-negocio {
+  text-align: center;
+  font-size: 14px;
+  color: var(--texto-soft);
+  margin: 40px auto;
+}
+
+/* =========================
+   WHATSAPP
+========================= */
+.wsp {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 56px;
+  height: 56px;
+  background: #25d366;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.6);
+}
+
+.wsp img {
+  width: 28px;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 600px) {
+  .hero h1 {
+    font-size: 24px;
+  }
+
+  .logo {
+    width: 70px;
+  }
+
+  .productos {
+    grid-template-columns: 1fr;
+  }
+
+  .pedido {
+    width: calc(100% - 40px);
+    right: 20px;
+  }
+}
